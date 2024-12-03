@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {% for i in all %}
+            <img src='{{i.profile_pic.url}}'>
+            {% endfor %}
+        </div>
+    </form>
+</body>
+</html>
